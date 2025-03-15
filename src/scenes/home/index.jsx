@@ -4,13 +4,11 @@ const Home = () => {
   const YOUR_API_KEY = "397bc1ef5b5164ddda358423e355bd0e"
 
   const [weatherData, setWeatherData] = useState(null);
-  const [location, setLocation] = useState(null);
   const [localName, setLocalName] = useState(null);
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
   const [state, setState] = useState(null);
   const [countryCode, setCountryCode] = useState(null);
-  const [icon, setIcon] = useState(null);
 
   const getBackgroundImage = (description) => {
     switch (description) {

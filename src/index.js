@@ -7,7 +7,7 @@ import Home from './scenes/home';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/weather-forecast/">
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
