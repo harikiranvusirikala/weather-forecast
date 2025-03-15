@@ -1,0 +1,58 @@
+$ npx create-react-app weather-forcast-app
+Cannot find module 'ajv/dist/compile/codegen' -> npm install ajv ajv-keywords --save
+
+$ cd weather-forcast-app
+$ npm run start
+
+https://home.openweathermap.org/api_keys
+
+Postman collection - https://web.postman.co/workspace/My-Workspace~c40d32ac-ef2e-4f5f-87ad-7c3afa67597b/request/8780287-5dd48776-630e-44c3-88b9-b1d18d955f79?tab=params
+
+OpenWather API Docs - https://openweathermap.org/current
+https://openweathermap.org/api/geocoding-api
+
+http://api.openweathermap.org/data/2.5/weather?lat=18.1191131&lon=83.4012089&appid=397bc1ef5b5164ddda358423e355bd0e&units=metric
+http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
+http://api.openweathermap.org/geo/1.0/reverse?lat={lat}&lon={lon}&limit={limit}&appid={API key}
+
+Create scenes, components folder
+home/index.jsx in scenes
+rafc + Enter to have boilder code
+
+$ npm install react-router-dom
+
+Update index.js
+===
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+  <React.StrictMode>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  </React.StrictMode>
+===
+
+Cmd + Shift + F for Auto indent
+Cotrol + Space on a name to import
+Shift + Option + O to organize imports
+
+$ npm install tailwindcss
+$ npx tailwindcss init
+
+$ npm install -D tailwindcss postcss autoprefixer
+$ npx tailwindcss init -p
+
+$ npm install -D tailwindcss@3 postcss autoprefixer
+$ npx tailwindcss init -p
+
+https://tailwindcss.com/docs/installation/using-postcss
+
+https://openweathermap.org/weather-conditions
+https://openweathermap.org/img/wn/10d@2x.png
+https://openweathermap.org/img/wn/10d@4x.png
+
+$ npm install gh-pages --save-dev
+
+
