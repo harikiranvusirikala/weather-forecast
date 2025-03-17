@@ -13,25 +13,25 @@ const Home = () => {
   const getBackgroundImage = (description) => {
     switch (description) {
       case 'clear sky':
-        return 'url(/images/clear-sky.png)';
+        return 'url(/weather-forecast/images/clear-sky.png)';
       case 'few clouds':
-        return 'url(/images/few-clouds.png)';
+        return 'url(/weather-forecast/images/few-clouds.png)';
       case 'scattered clouds':
-        return 'url(/images/scattered-clouds.png)';
+        return 'url(/weather-forecast/images/scattered-clouds.png)';
       case 'broken clouds':
-        return 'url(/images/broken-clouds.png)';
+        return 'url(/weather-forecast/images/broken-clouds.png)';
       case 'shower rain':
-        return 'url(/images/shower-rain.png)';
+        return 'url(/weather-forecast/images/shower-rain.png)';
       case 'rain':
-        return 'url(/images/rain.png)';
+        return 'url(/weather-forecast/images/rain.png)';
       case 'thunderstorm':
-        return 'url(/images/thunderstorm.png)';
+        return 'url(/weather-forecast/images/thunderstorm.png)';
       case 'snow':
-        return 'url(/images/snow.png)';
+        return 'url(/weather-forecast/images/snow.png)';
       case 'mist':
-        return 'url(/images/mist.png)';
+        return 'url(/weather-forecast/images/mist.png)';
       default:
-        return 'url(/images/default.png)';
+        return 'url(/weather-forecast/images/default.png)';
     }
   };
 
@@ -83,7 +83,7 @@ const Home = () => {
   }, [latitude, longitude]);
 
   useEffect(() => {
-    const backgroundImage = weatherData ? getBackgroundImage(weatherData.weather?.[0]?.description) : 'url(/images/default.png)';
+    const backgroundImage = weatherData ? getBackgroundImage(weatherData.weather?.[0]?.description) : 'url(/weather-forecast/images/default.png)';
     document.body.style.backgroundImage = backgroundImage;
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundPosition = 'center';
@@ -100,7 +100,7 @@ const Home = () => {
         placeholder="Enter your location"
         className="border p-2 mb-4 w-full max-w-md text-black"
         onChange={async (e) => {
-          await fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + e.target.value
+          await fetch('https://api.openweathermap.org/geo/1.0/direct?q=' + e.target.value
             + '&appid=' + YOUR_API_KEY
             + '&limit=10')
             .then((response) => response.json())
@@ -117,7 +117,7 @@ const Home = () => {
             });
         }}
       />
-      <button
+      {/* <button
         className="bg-blue-500 text-white p-2 rounded mb-4"
         onClick={async () => {
           await fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + location
@@ -136,7 +136,7 @@ const Home = () => {
               }
             });
         }}
-      >Get Weather</button>
+      >Get Weather</button> */}
 
       {
         weatherData && (
